@@ -82,9 +82,13 @@ RUN echo 'bindkey "^S" history-incremental-search-forward' >> $HOME/.zshrc
 RUN curl -sf https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh \
     | sh -s $HOME/.cache/dein
 
-COPY vim/vimrc .vimrc
-COPY vim/colors/ .vim/colors/
-COPY vim/dein/ .dein/
+RUN git clone --recursive \
+		https://github.com/Lumpen1999/utils.git
+
+# シンボリックリンクを貼ってみる
+RUN cp utils/docker/vim/vimrc .vimrc
+RUN cp vim/colors/ .vim/colors/
+RUN cp vim/dein/ .dein/
 
 # poetry
 RUN pip install -U pip
