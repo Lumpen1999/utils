@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =6
+let g:netrw_dirhist_6='/Users/shogo/Desktop/xDNN/xdnn/network'
+let g:netrw_dirhist_5='/Users/shogo/Desktop/kurokumo-repository/src/kurokumo_package/pipelines/data_preprocessing'
+let g:netrw_dirhist_4='/Users/shogo/Desktop/kurokumo-repository/src/kurokumo_package/pipelines'
+let g:netrw_dirhist_3='/Users/shogo/Desktop/kurokumo-repository/src/kurokumo_package/pipelines/data_update'
+let g:netrw_dirhist_2='/Users/shogo/Desktop/crypto_bot_repository/src'
+let g:netrw_dirhist_1='/Users/shogo/Desktop/kurokumo-repository/src/kurokumo_package/pipelines/data_science'
+let g:netrw_dirhist_0='/Users/shogo/Desktop/kurokumo-repository/src/kurokumo_package/pipelines/realtime_operation'
+let g:netrw_dirhist_9='/Users/shogo/Desktop/uni/B4'
+let g:netrw_dirhist_8='/Users/shogo/Desktop/uni/B4/ソフトウェア特論'
+let g:netrw_dirhist_7='/Users/shogo/Desktop/uni/B4'

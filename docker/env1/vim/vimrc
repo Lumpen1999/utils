@@ -1,0 +1,139 @@
+set history=200
+set number
+set background=dark
+" colorscheme hybrid 
+colorscheme iceberg 
+"ビープ音の無効
+set visualbell t_vb=
+"ハイライト
+set hlsearch
+"大文字と小文字を区別しない
+set ignorecase
+"大文字と小文字が混在した検索のみ大文字と小文字を区別する
+set smartcase
+"カーソル移動で行をまたげるようにする
+set whichwrap=b,s,h,l,<,>,~,[,]
+set title
+set fileencoding=utf-8 " 保存時の文字コード
+set fileencodings=ucs-boms,utf-8,euc-jp,cp932 " 読み込み時の文字コードの自動判別. 左側が優先される
+set fileformats=unix,dos,mac " 改行コードの自動判別. 左側が優先される
+set ambiwidth=double " □や○文字が崩れる問題を解決
+""tabを四文字に
+set tabstop=4
+set shiftwidth=4
+""set mouse-=a
+
+"" Practice Vim
+"p103コマンドラインモードで<C-p><C-n>履歴を遡る時でもフィルタをかけてくれる
+cnoremap <C-p> <Up>
+cnoremap <C-n> <Down>
+"p153 矢印キー無効化
+noremap <Up> <Nop>
+noremap <Down> <Nop>
+noremap <Left> <Nop>
+noremap <Right> <Nop>
+
+"p136 %:hと同じことを%%によって行う
+cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
+
+"p116 バッファ間の移動 
+noremap <silent> [b :bprevious<CR>
+noremap <silent> ]b :bnext<CR>
+noremap <silent> [B :bfirst<CR>
+noremap <silent> ]B :blast<CR>
+"p209 貼り付けの際のインデント
+:set autoindent
+
+""https://qiita.com/jiroshin/items/ee86ea426a51fa24b319#1-vimrc-をdotfilesで管理しよう-gear----------
+
+" 括弧の補完
+inoremap {<Enter> {}<Left><CR><ESC><S-o>
+inoremap [<Enter> []<Left><CR><ESC><S-o>
+inoremap (<Enter> ()<Left><CR><ESC><S-o>
+
+" クオーテーションの補完
+inoremap ' ''<LEFT>
+inoremap " ""<LEFT>
+
+" bdで現在のバッファを削除
+nnoremap bd :bd<CR>
+
+"end"https://qiita.com/jiroshin/items/ee86ea426a51fa24b319#1-vimrc-をdotfilesで管理しよう-gear----------
+
+set laststatus=2
+set showtabline=2 
+set t_Co=256
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#buffer_idx_mode = 1
+let g:airline_theme='bubblegum'
+let g:airline_powerline_fonts = 1
+
+
+"dein Scripts-----------------------------
+if &compatible
+  set nocompatible 
+endif
+
+" Required:
+set runtimepath+=~/.cache/dein/repos/github.com/Shougo/dein.vim
+
+" Required:
+if dein#load_state('~/.cache/dein')
+  call dein#begin('~/.cache/dein')
+
+  " Let dein manage dein
+  " Required:
+  call dein#add('~/.cache/dein/repos/github.com/Shougo/dein.vim')
+
+
+  " Add or remove your plugins here like this:
+  call dein#add('Shougo/neosnippet.vim')
+  call dein#add('Shougo/neosnippet-snippets')
+  call dein#add('tpope/vim-surround')
+  call dein#add('tpope/vim-commentary')
+  call dein#add('vim-airline/vim-airline')
+  call dein#add('vim-airline/vim-airline-themes')
+  call dein#add( 'prabirshrestha/vim-lsp')
+  call dein#add('mattn/vim-lsp-settings')
+
+  " call dein#add('neoclide/coc.nvim', {'merged':0,'rev':'release'})
+  " call dein#add('ryanoasis/vim-devicons')
+  " call dein#add('tpope/vim-fugitive')
+  " call dein#add('lambdalisue/nerdfont.vim')
+  " call dein#add('lambdalisue/fern-renderer-nerdfont.vim')
+  " call dein#add('lambdalisue/fern.vim')
+  " call dein#add('lambdalisue/fern-git-status.vim')
+
+  
+  " Required:
+  call dein#end()
+  call dein#save_state()
+endif
+
+" Required:
+filetype plugin indent on
+syntax enable
+
+filetype plugin on
+
+" If you want to install not installed plugins on startup.
+if dein#check_install()
+  call dein#install()
+endif
+
+"End dein Scripts-------------------------
+
+"""fernでアイコンを表示する
+"let g:fern#renderer = 'nerdfont'
+
+""vim起動時にfernを開く
+""augroup __fern__au!
+""	autocmd VimEnter * ++nested Fern . -drawer -stay -keep -toggle -reveal=%
+""augroup END
+
+""fernの表示非表示をトグル
+" nnoremap ,t :<c-u>Fern .  -drawer -stay -keep -toggle -reveal=%<cr>
+
+""Coc.nvim 
+""cf. https://qiita.com/coil_msp123/items/29de76b035dd28af77a9
+
