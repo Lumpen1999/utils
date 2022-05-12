@@ -1,7 +1,8 @@
+" colorscheme iceberg
+" colorscheme hybrid  
 set history=200
 set number
 set background=dark
-# colorscheme iceberg " colorscheme hybrid  
 set visualbell t_vb= 
 set belloff=all
 set hlsearch
@@ -16,8 +17,8 @@ set ambiwidth=double " □や○文字が崩れる問題を解決
 set tabstop=4 " tabを四文字に
 set shiftwidth=4
 " p103 コマンドラインモードでCrl-pとCtl-n履歴を遡る時でもフィルタをかけてくれる
-cnoremap <C-p> <Up>
-cnoremap <C-n> <Down>
+" cnoremap <C-p> <Up>
+" cnoremap <C-n> <Down>
 "" p153 矢印キー無効化
 noremap <Up> <Nop>
 noremap <Down> <Nop>
