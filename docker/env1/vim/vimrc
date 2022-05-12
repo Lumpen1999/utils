@@ -18,7 +18,7 @@ set tabstop=4 " tabを四文字に
 set shiftwidth=4
 
 " Practice Vim
-" p103コマンドラインモードで<C-p><C-n>履歴を遡る時でもフィルタをかけてくれる
+" p103 コマンドラインモードでCrl-pとCtl-n履歴を遡る時でもフィルタをかけてくれる
 cnoremap <C-p> <Up>
 cnoremap <C-n> <Down>
 "" p153 矢印キー無効化
