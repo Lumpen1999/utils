@@ -1,18 +1,18 @@
 set history=200
 set number
 set background=dark
-" colorscheme hybrid 
+"" colorscheme hybrid 
 colorscheme iceberg 
-"ビープ音の無効
+""ビープ音の無効
 set visualbell t_vb= 
 set belloff=all
-"ハイライト
+""ハイライト
 set hlsearch
-"大文字と小文字を区別しない
+""大文字と小文字を区別しない
 set ignorecase
-"大文字と小文字が混在した検索のみ大文字と小文字を区別する
+""大文字と小文字が混在した検索のみ大文字と小文字を区別する
 set smartcase
-"カーソル移動で行をまたげるようにする
+""カーソル移動で行をまたげるようにする
 set whichwrap=b,s,h,l,<,>,~,[,]
 set title
 set fileencoding=utf-8 " 保存時の文字コード
@@ -25,19 +25,19 @@ set shiftwidth=4
 ""set mouse-=a
 
 "" Practice Vim
-"p103コマンドラインモードで<C-p><C-n>履歴を遡る時でもフィルタをかけてくれる
+"" p103コマンドラインモードで<C-p><C-n>履歴を遡る時でもフィルタをかけてくれる
 cnoremap <C-p> <Up>
 cnoremap <C-n> <Down>
-"p153 矢印キー無効化
+"" p153 矢印キー無効化
 noremap <Up> <Nop>
 noremap <Down> <Nop>
 noremap <Left> <Nop>
 noremap <Right> <Nop>
 
-"p136 %:hと同じことを%%によって行う
+"" p136 %:hと同じことを%%によって行う
 cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
 
-"p116 バッファ間の移動 
+"" p116 バッファ間の移動 
 noremap <silent> [b :bprevious<CR>
 noremap <silent> ]b :bnext<CR>
 noremap <silent> [B :bfirst<CR>
