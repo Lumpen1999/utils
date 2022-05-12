@@ -2,7 +2,7 @@ winpty docker exec -it [container name] zsh
 winpty docker run [imagename]
 winpty docker start [container name]
 winpty docker exec -it test zsh
-winpty docker run --name xdnn -it env
+winpty docker run --name xdnn -v [ホストディレクトリの絶対パス]:[コンテナの絶対パス] -it env1
 docker images
 docker ps -a  
 docker container exec -it test zsh
@@ -21,5 +21,6 @@ docker build -t env1 .
 
 
 RUN echo "$USER:your_pass" | chpasswd
+
 
 
