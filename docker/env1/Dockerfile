@@ -86,9 +86,9 @@ RUN git clone --recursive https://github.com/Lumpen1999/utils.git
 RUN mkdir .vim
 RUN mkdir .vim/colors
 RUN mkdir .dein
-RUN ln -sf utils/docker/vim/vimrc .vimrc
-RUN ln -sf utils/docker/vim/colors/ .vim/colors/
-RUN ln -sf utils/docker/vim/dein/ .dein/
+RUN ln -sf ~/utils/docker/vim/vimrc ~/.vimrc
+RUN ln -sf ~/utils/docker/vim/colors/ ~/.vim/colors/
+RUN ln -sf ~/utils/docker/vim/dein/ ~/.dein/
 
 # poetry
 RUN pip install -U pip

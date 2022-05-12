@@ -4,7 +4,8 @@ set background=dark
 " colorscheme hybrid 
 colorscheme iceberg 
 "ビープ音の無効
-set visualbell t_vb=
+set visualbell t_vb= 
+set belloff=all
 "ハイライト
 set hlsearch
 "大文字と小文字を区別しない
