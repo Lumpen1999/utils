@@ -1,27 +1,22 @@
 set history=200
 set number
 set background=dark
-"" colorscheme hybrid 
-colorscheme iceberg 
-"" ビープ音の無効
+
+colorscheme iceberg " colorscheme hybrid  
 set visualbell t_vb= 
 set belloff=all
-"" ハイライト
 set hlsearch
-"" 大文字と小文字を区別しない
 set ignorecase
-"" 大文字と小文字が混在した検索のみ大文字と小文字を区別する
 set smartcase
-"" カーソル移動で行をまたげるようにする
 set whichwrap=b,s,h,l,<,>,~,[,]
 set title
 set fileencoding=utf-8 " 保存時の文字コード
 set fileencodings=ucs-boms,utf-8,euc-jp,cp932 " 読み込み時の文字コードの自動判別. 左側が優先される
 set fileformats=unix,dos,mac " 改行コードの自動判別. 左側が優先される
 set ambiwidth=double " □や○文字が崩れる問題を解決
-"" tabを四文字に
-set tabstop=4
+set tabstop=4 " tabを四文字に
 set shiftwidth=4
+
 "" Practice Vim
 "" p103コマンドラインモードで<C-p><C-n>履歴を遡る時でもフィルタをかけてくれる
 cnoremap <C-p> <Up>
