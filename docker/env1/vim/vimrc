@@ -17,8 +17,8 @@ set ambiwidth=double " □や○文字が崩れる問題を解決
 set tabstop=4 " tabを四文字に
 set shiftwidth=4
 
-"" Practice Vim
-"" p103コマンドラインモードで<C-p><C-n>履歴を遡る時でもフィルタをかけてくれる
+" Practice Vim
+" p103コマンドラインモードで<C-p><C-n>履歴を遡る時でもフィルタをかけてくれる
 cnoremap <C-p> <Up>
 cnoremap <C-n> <Down>
 "" p153 矢印キー無効化
@@ -27,10 +27,10 @@ noremap <Down> <Nop>
 noremap <Left> <Nop>
 noremap <Right> <Nop>
 
-"" p136 %:hと同じことを%%によって行う
+" p136 %:hと同じことを%%によって行う
 cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
 
-"" p116 バッファ間の移動 
+" p116 バッファ間の移動 
 noremap <silent> [b :bprevious<CR>
 noremap <silent> ]b :bnext<CR>
 noremap <silent> [B :bfirst<CR>
@@ -116,18 +116,4 @@ if dein#check_install()
 endif
 
 "End dein Scripts-------------------------
-
-"""fernでアイコンを表示する
-"let g:fern#renderer = 'nerdfont'
-
-""vim起動時にfernを開く
-""augroup __fern__au!
-""	autocmd VimEnter * ++nested Fern . -drawer -stay -keep -toggle -reveal=%
-""augroup END
-
-""fernの表示非表示をトグル
-" nnoremap ,t :<c-u>Fern .  -drawer -stay -keep -toggle -reveal=%<cr>
-
-""Coc.nvim 
-""cf. https://qiita.com/coil_msp123/items/29de76b035dd28af77a9
 
