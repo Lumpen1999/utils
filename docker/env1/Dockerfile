@@ -77,6 +77,11 @@ RUN echo "export LANG=ja_JP.UTF-8" >> $HOME/.zshrc
 RUN echo 'export PS1="%~ %# "' >> $HOME/.zshrc
 RUN echo 'bindkey "^R" history-incremental-search-backward' >> $HOME/.zshrc
 RUN echo 'bindkey "^S" history-incremental-search-forward' >> $HOME/.zshrc
+RUN { \
+    echo 'autoload -Uz promptinit'; \
+    echo 'promptinit'; \
+    echo 'prompt skwp'; \
+}  >> $HOME/.zshrc
 
 ### vim ###
 RUN curl -sf https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh \
