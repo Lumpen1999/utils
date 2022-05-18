@@ -71,7 +71,7 @@ RUN ln -s $HOME/.zprezto/runcoms/zlogin    $HOME/.zlogin \
 # https://qiita.com/mollifier/items/02eb36b5a58d119c2f1c
 # setopt -> zsh option
 RUN echo "PATH=$PATH:$HOME/.local/bin" >> $HOME/.zshrc
-RUN echo "export HISTFILE=${HOME}/.zhistory" >> $HOME/.zshrc
+# RUN echo "export HISTFILE=${HOME}/.zhistory" >> $HOME/.zshrc
 RUN echo "setopt inc_append_history" >> $HOME/.zshrc
 RUN echo "export LANG=ja_JP.UTF-8" >> $HOME/.zshrc
 RUN echo 'export PS1="%~ %# "' >> $HOME/.zshrc
